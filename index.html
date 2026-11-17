@@ -1,0 +1,1077 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Metatags Estratégicas & SEO -->
+  <title>Sabores do Norte | Culinária Paraense Autêntica em Joinville - SC</title>
+  <meta name="description" content="Um pedacinho do Pará em Joinville! Experimente o autêntico tacacá, maniçoba, vatapá paraense e ingredientes tradicionais da Amazônia. Sabores, afeto e acolhimento.">
+  <meta name="keywords" content="Sabores do Norte, culinária paraense em Joinville, comida do Pará Joinville, tacacá em Joinville, maniçoba, vatapá paraense, açaí tradicional, restaurante paraense SC">
+  <meta name="author" content="Sabores do Norte">
+  <meta name="theme-color" content="#080506">
+  
+  <!-- Open Graph / Redes Sociais -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Sabores do Norte | Um pedacinho do Pará em Joinville">
+  <meta property="og:description" content="Sabores autênticos, receitas tradicionais e o carinho da nossa terra em cada experiência gastronômica.">
+  <meta property="og:image" content="CAPA/1.jpg">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="CAPA/logo.png">
+
+  <!-- Google Fonts: Tipografia Editorial & Gastronômica -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Folhas de Estilo Modulares -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Acessibilidade: Pular para o Conteúdo Principal -->
+  <a href="#inicio" class="skip-link">Pular para o conteúdo principal</a>
+
+  <!-- ========================================================================
+       BLOCO 02: HEADER PRINCIPAL E NAVEGAÇÃO
+       ======================================================================== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-container">
+      
+      <!-- Marca / Logo em Posição de Destaque -->
+      <a href="#inicio" class="header-brand" aria-label="Sabores do Norte - Voltar ao início">
+        <div class="header-logo-wrap">
+          <img src="CAPA/logo.png" alt="Logo Sabores do Norte" class="header-logo" width="58" height="58">
+        </div>
+        <div class="header-brand-text">
+          <span class="brand-title">Sabores do Norte</span>
+          <span class="brand-subtitle">Culinária Paraense</span>
+        </div>
+      </a>
+
+      <!-- Menu de Navegação Desktop (8 Itens Mapeados) -->
+      <nav class="header-nav" aria-label="Navegação Principal">
+        <ul class="nav-list">
+          <li><a href="#inicio" class="nav-link active">Início</a></li>
+          <li><a href="#comidas-tipicas" class="nav-link">Comidas Típicas</a></li>
+          <li><a href="#nosso-espaco" class="nav-link">Nosso Espaço</a></li>
+          <li><a href="#nossa-historia" class="nav-link">Nossa História</a></li>
+          <li><a href="#cultura-para" class="nav-link">Cultura do Pará</a></li>
+          <li><a href="#nossos-pratos" class="nav-link">Nossos Pratos</a></li>
+          <li><a href="#localizacao" class="nav-link">Localização</a></li>
+          <li><a href="#contato" class="nav-link">Contato</a></li>
+        </ul>
+      </nav>
+
+      <!-- Ações: CTA Destacado do Cardápio & Botão Hambúrguer Mobile -->
+      <div class="header-actions">
+        <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn-header-cta" title="Acessar Cardápio Oficial no InstaDelivery">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8.1 13.34l2.83-2.83L3.91 3.5a4.008 4.008 0 000 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L14.88 11.53z"/></svg>
+          <span>Ver Cardápio</span>
+        </a>
+
+        <!-- Botão Hambúrguer Acessível -->
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav-drawer" aria-label="Abrir menu de navegação">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Backdrop do Menu Mobile -->
+  <div class="mobile-backdrop" aria-hidden="true"></div>
+
+  <!-- Gaveta Lateral Mobile (Mobile Drawer) -->
+  <aside class="mobile-drawer" id="mobile-nav-drawer" aria-label="Menu Mobile">
+    <div class="mobile-badge">Autêntico Pará em Joinville</div>
+    
+    <ul class="mobile-nav-list">
+      <li><a href="#inicio" class="mobile-nav-link active">Início</a></li>
+      <li><a href="#comidas-tipicas" class="mobile-nav-link">Comidas Típicas</a></li>
+      <li><a href="#nosso-espaco" class="mobile-nav-link">Nosso Espaço</a></li>
+      <li><a href="#nossa-historia" class="mobile-nav-link">Nossa História</a></li>
+      <li><a href="#cultura-para" class="mobile-nav-link">Cultura do Pará</a></li>
+      <li><a href="#nossos-pratos" class="mobile-nav-link">Nossos Pratos</a></li>
+      <li><a href="#localizacao" class="mobile-nav-link">Localização</a></li>
+      <li><a href="#contato" class="mobile-nav-link">Contato</a></li>
+    </ul>
+
+    <div class="mobile-actions">
+      <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn-mobile-cta">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8.1 13.34l2.83-2.83L3.91 3.5a4.008 4.008 0 000 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L14.88 11.53z"/></svg>
+        <span>Acessar Cardápio Online</span>
+      </a>
+
+      <div class="mobile-contact-pill">
+        <span>📍 Rua Marquês de Maricá, 76 — Joinville</span>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       BLOCO 03: DOBRA 01 — HERO / INÍCIO
+       ======================================================================== -->
+  <section class="hero-section" id="inicio">
+    <!-- Mídia de Fundo: Vídeo Cinematográfico Real com Poster -->
+    <div class="hero-media-wrapper">
+      <video class="hero-video" autoplay muted loop playsinline poster="CAPA/1.jpg">
+        <source src="CAPA/VIDEO - HERO.mp4" type="video/mp4">
+        Seu navegador não suporta a tag de vídeo.
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="container hero-content">
+      <!-- Etiqueta Superior com Linha Decorativa -->
+      <div class="hero-tag reveal-on-scroll">
+        <span class="hero-tag-line"></span>
+        <span>A CULTURA E O SABOR DO PARÁ EM JOINVILLE</span>
+        <span class="hero-tag-line"></span>
+      </div>
+
+      <!-- Título Principal -->
+      <h1 class="hero-title reveal-on-scroll">
+        Um pedacinho do Pará <br>
+        <span class="hero-title-highlight">em Joinville!</span>
+      </h1>
+
+      <!-- Subtítulo -->
+      <p class="hero-subtitle reveal-on-scroll">
+        Sabores autênticos, receitas tradicionais e o carinho da nossa terra em cada experiência.
+      </p>
+
+      <!-- CTA Principal -->
+      <div class="hero-actions reveal-on-scroll">
+        <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-primary pulse-gold">
+          <span>Quero viver essa experiência!</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#comidas-tipicas" class="btn btn-secondary">
+          <span>Conhecer os Pratos</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Indicador Visual de Rolagem -->
+    <a href="#nossa-essencia" class="hero-scroll-indicator" aria-label="Rolar para a próxima seção">
+      <div class="mouse-icon">
+        <span class="mouse-wheel"></span>
+      </div>
+      <span>Descubra</span>
+    </a>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">✦</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 04: DOBRA 02 — NOSSA ESSÊNCIA
+       ======================================================================== -->
+  <section class="essence-section" id="nossa-essencia">
+    <div class="container">
+      
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-badge badge-center">NOSSA ESSÊNCIA</span>
+        <p class="essence-intro">
+          “Nas margens do Amazonas nasceu nossa paixão. Trazemos muito mais que comida: levamos afeto, memória e identidade. Em cada receita, uma história. Em cada prato, uma viagem pelas raízes do Pará.”
+        </p>
+      </div>
+
+      <!-- Três Cards Principais Interativos (Comportamento de Escala & Destaque) -->
+      <div class="essence-grid stagger-group" id="essence-cards-container">
+        
+        <!-- CARD 01 -->
+        <div class="essence-card stagger-item is-selected" data-index="1">
+          <span class="essence-card-number">01</span>
+          <div class="essence-card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+          </div>
+          <h3 class="essence-card-title">Feito com Amor</h3>
+          <p class="essence-card-text">
+            Cada prato é preparado com o carinho e a dedicação das nossas raízes paraenses, preservando os sabores e a autenticidade da nossa terra.
+          </p>
+        </div>
+
+        <!-- CARD 02 -->
+        <div class="essence-card stagger-item" data-index="2">
+          <span class="essence-card-number">02</span>
+          <div class="essence-card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"></path><path d="M2 12h20"></path></svg>
+          </div>
+          <h3 class="essence-card-title">Pará em Joinville</h3>
+          <p class="essence-card-text">
+            Trouxemos a cultura, os ingredientes e os sabores únicos do Norte para Santa Catarina, criando uma conexão especial entre duas regiões do Brasil.
+          </p>
+        </div>
+
+        <!-- CARD 03 -->
+        <div class="essence-card stagger-item" data-index="3">
+          <span class="essence-card-number">03</span>
+          <div class="essence-card-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          </div>
+          <h3 class="essence-card-title">Tradição Familiar</h3>
+          <p class="essence-card-text">
+            Nossas receitas carregam histórias e conhecimentos transmitidos entre gerações, preservando a riqueza da culinária paraense.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Fechamento da Seção -->
+      <div class="essence-outro reveal-on-scroll">
+        “Aqui, você não apenas experimenta novos sabores. Você vive a cultura do Pará, sente o acolhimento da nossa gente e descobre que algumas distâncias se encurtam ao redor de uma boa mesa.”
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">🌿</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 05: DOBRA 03 — NOSSA HISTÓRIA
+       ======================================================================== -->
+  <section class="history-section" id="nossa-historia">
+    <div class="container">
+      
+      <div class="section-header reveal-on-scroll">
+        <span class="section-badge has-line-after">NOSSA HISTÓRIA</span>
+        <h2 class="section-title">Uma jornada de sabores, sonhos e saudade que conecta o Norte ao Sul do Brasil.</h2>
+        <p class="section-subtitle">
+          Uma história que nasceu da saudade de casa e se transformou em um sonho compartilhado por meio da gastronomia paraense.
+        </p>
+      </div>
+
+      <div class="history-layout">
+        
+        <!-- Blocos Narrativos Editoriais -->
+        <div class="history-narrative reveal-on-scroll">
+          
+          <div class="history-block">
+            <h3 class="history-block-title">Do coração da Amazônia para Joinville</h3>
+            <p class="history-block-text">
+              Há quase oito anos, Beatriz chegou a Joinville em busca de novas oportunidades e de um futuro melhor para sua família. Longe de casa, a saudade do Pará estava sempre presente, especialmente das lembranças, dos aromas e dos sabores únicos de sua terra natal.
+            </p>
+            <p class="history-block-text" style="margin-top: 0.65rem;">
+              Foi então que ela encontrou na cozinha muito mais do que uma profissão: encontrou uma maneira de manter suas raízes vivas. Com o talento e o carinho que sempre fizeram parte de sua história, começou a transformar a saudade em receitas, compartilhando um pedacinho da cultura amazônica com o Sul do Brasil.
+            </p>
+          </div>
+
+          <div class="history-block">
+            <h3 class="history-block-title">De delivery caseiro ao sonho realizado</h3>
+            <p class="history-block-text">
+              Tudo começou de forma simples, com um delivery de pratos típicos paraenses aos finais de semana, preparado com carinho na cozinha de casa. O sabor conquistou as pessoas, as recomendações se multiplicaram e o que nasceu entre as paredes do lar da família começou a ganhar proporções cada vez maiores.
+            </p>
+            <p class="history-block-text" style="margin-top: 0.65rem;">
+              O carinho dos clientes e a força do boca a boca mostraram que aquele sonho poderia ir muito além. Em agosto de 2024, um novo capítulo começou: o Sabores do Norte ganhou sua própria casa! Um espaço acolhedor, pensado para receber pessoas e celebrar a riqueza da cultura paraense por meio da gastronomia.
+            </p>
+          </div>
+
+          <div class="history-block">
+            <h3 class="history-block-title">Mais que um restaurante, uma experiência</h3>
+            <p class="history-block-text">
+              Cada prato servido carrega o carinho de quem conhece o verdadeiro significado da saudade de casa. Nossa missão é levar você a uma viagem pela Amazônia através dos sabores, aromas e tradições da culinária paraense, criando uma ponte de experiências entre o Norte e o Sul do Brasil.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- Registro Fotográfico Real: Família Fundadora na Fachada do Restaurante -->
+        <div class="history-visual-frame reveal-on-scroll">
+          <img src="FAMILIA/1.png" alt="Beatriz e sua família celebrando a inauguração do restaurante Sabores do Norte em Joinville" loading="lazy">
+          <div class="history-caption">
+            <span><strong>Família Sabores do Norte</strong> · Inauguração da Casa Própria</span>
+            <span class="auth-badge">Registro Real</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Linha do Tempo Visual Cronológica -->
+      <div class="history-timeline stagger-group">
+        <div class="timeline-step stagger-item">
+          <div class="timeline-year">2017</div>
+          <h4 class="timeline-label">A Chegada a Joinville</h4>
+          <p class="timeline-desc">Beatriz desembarca em Santa Catarina trazendo a bagagem de afeto, tradições culinárias e a saudade do Pará.</p>
+        </div>
+        <div class="timeline-step stagger-item">
+          <div class="timeline-year">2021</div>
+          <h4 class="timeline-label">O Delivery aos Finais de Semana</h4>
+          <p class="timeline-desc">As primeiras encomendas preparadas na cozinha de casa conquistam a comunidade joinvilense pelo sabor autêntico.</p>
+        </div>
+        <div class="timeline-step stagger-item">
+          <div class="timeline-year">Agosto 2024</div>
+          <h4 class="timeline-label">A Casa Própria do Sabores do Norte</h4>
+          <p class="timeline-desc">Inauguração do restaurante físico na Rua Marquês de Maricá, acolhendo clientes com a cultura paraense viva.</p>
+        </div>
+      </div>
+
+      <!-- Citação de Destaque -->
+      <div class="history-quote-box reveal-on-scroll">
+        <div class="history-quote-icon">“</div>
+        <blockquote class="history-quote-text">
+          A comida do Pará não é só tempero. Ela carrega histórias, raízes e memórias. Eu queria que as pessoas sentissem tudo isso. Trazer um pedacinho de casa de volta à mesa, despertar a saudade e transformá-la em uma experiência. Esse é o nosso propósito.
+        </blockquote>
+        <div class="history-quote-signature">
+          <span class="signature-phrase">“Um pedacinho do Pará na sua mesa.”</span>
+          <span class="signature-brand">Sabores do Norte · Joinville</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">✦</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 06: DOBRA 04 — COMIDAS TÍPICAS
+       ======================================================================== -->
+  <section class="typical-dishes-section" id="comidas-tipicas">
+    <div class="container">
+      
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-badge badge-center">COMIDAS TÍPICAS</span>
+        <h2 class="section-title">Cada prato é uma ponte para nossas raízes.</h2>
+        <p class="section-subtitle">Sinta o calor do Norte em cada mordida.</p>
+      </div>
+
+      <!-- 5 Apresentações Cinematográficas com Mídia Própria -->
+      <div class="dishes-cinematic-list">
+        
+        <!-- PRATO 01: TACACÁ -->
+        <article class="dish-cinematic-card reveal-on-scroll">
+          <div class="dish-media">
+            <video autoplay muted loop playsinline poster="PRATOS/2.png">
+              <source src="CAPA/VIDEO DESTAQUE.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="dish-info">
+            <span class="dish-number">01 / CLÁSSICO PARAENSE</span>
+            <h3 class="dish-title">Tacacá</h3>
+            <p class="dish-description">
+              O clássico paraense preparado com tucupi quentinho, camarões secos, goma de tapioca e jambu, a erva amazônica que proporciona aquela sensação única de formigamento na boca.
+            </p>
+            <div>
+              <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>Pedir Tacacá</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRATO 02: MANIÇOBA -->
+        <article class="dish-cinematic-card reverse reveal-on-scroll">
+          <div class="dish-media">
+            <video autoplay muted loop playsinline poster="REFERENCIAS/MANIÇOBA.png">
+              <source src="PRATOS/maniçoba.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="dish-info">
+            <span class="dish-number">02 / TRADIÇÃO ANCESTRAL</span>
+            <h3 class="dish-title">Maniçoba</h3>
+            <p class="dish-description">
+              A famosa feijoada paraense, preparada com folhas de mandioca brava (maniva), cozidas por vários dias e acompanhadas de ingredientes tradicionais que dão origem a um sabor intenso e inconfundível.
+            </p>
+            <div>
+              <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>Pedir Maniçoba</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRATO 03: VATAPÁ PARAENSE (VÍDEO) -->
+        <article class="dish-cinematic-card reveal-on-scroll">
+          <div class="dish-media">
+            <video autoplay muted loop playsinline poster="PRATOS/1.png">
+              <source src="VIDEOS/vatapa.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="dish-info">
+            <span class="dish-number">03 / CREMOSIDADE & SABOR</span>
+            <h3 class="dish-title">Vatapá Paraense</h3>
+            <p class="dish-description">
+              Cremoso e cheio de personalidade, preparado com temperos tradicionais, azeite de dendê, camarão seco e castanha-do-pará. Uma combinação marcante que traduz a riqueza e a tradição da culinária paraense.
+            </p>
+            <div>
+              <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>Pedir Vatapá</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRATO 04: AÇAÍ TRADICIONAL (VÍDEO) -->
+        <article class="dish-cinematic-card reverse reveal-on-scroll">
+          <div class="dish-media">
+            <video autoplay muted loop playsinline poster="PRATOS/4.png">
+              <source src="VIDEOS/acai.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="dish-info">
+            <span class="dish-number">04 / RAÍZES DA FLORESTA</span>
+            <h3 class="dish-title">Açaí Tradicional</h3>
+            <p class="dish-description">
+              Açaí com sabor autêntico da Amazônia, acompanhado de farinha de tapioca, peixe frito ou camarão. Uma combinação tradicional para quem deseja conhecer o verdadeiro jeito paraense de apreciar o açaí.
+            </p>
+            <div>
+              <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>Pedir Açaí Tradicional</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- PRATO 05: SOBREMESAS REGIONAIS (VÍDEO) -->
+        <article class="dish-cinematic-card reveal-on-scroll">
+          <div class="dish-media">
+            <video autoplay muted loop playsinline poster="IMAGENS/sobremesa.jpg">
+              <source src="VIDEOS/sobremesa.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="dish-info">
+            <span class="dish-number">05 / DOÇURA DA AMAZÔNIA</span>
+            <h3 class="dish-title">Sobremesas Regionais</h3>
+            <p class="dish-description">
+              Uma seleção de delícias inspiradas nos sabores do Norte: sobremesas de cupuaçu, mousses, bolos e outras receitas regionais preparadas para adoçar sua experiência com um toque especial da Amazônia.
+            </p>
+            <div>
+              <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <span>Ver Sobremesas</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Chamada Especial: Ingredientes Autênticos Trazidos Diretamente do Pará -->
+      <div class="authentic-ingredients-callout reveal-on-scroll">
+        <h4 class="authentic-ingredients-title">✦ O Segredo da Autenticidade ✦</h4>
+        <p class="authentic-ingredients-text">
+          “Trabalhamos com ingredientes cuidadosamente selecionados, muitos deles trazidos diretamente do Pará: tucupi, jambu, camarão seco regional, polpa natural de açaí e temperos tradicionais que preservam a essência e a autenticidade da culinária paraense.”
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">✦</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 07: DOBRA 05 — NOSSOS PRATOS REAIS (GALERIA 3D PROFUNDIDADE)
+       ======================================================================== -->
+  <section class="real-dishes-section" id="nossos-pratos">
+    <div class="container">
+      
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-badge badge-center">NOSSOS PRATOS REAIS</span>
+        <h2 class="section-title">A beleza genuína do sabor nortista.</h2>
+        <p class="section-subtitle">
+          Veja de perto a autenticidade, as cores e o carinho presentes em cada prato que preparamos. Sabores genuínos, ingredientes regionais e receitas tradicionais que levam você a uma verdadeira viagem pelo coração da Amazônia.
+        </p>
+      </div>
+
+      <!-- Galeria 3D com Efeito de Profundidade & 7 Fotografias Reais Fornecidas -->
+      <div class="gallery-3d-container" id="dishes-gallery">
+        <div class="gallery-stage">
+          
+          <div class="gallery-slide is-active" data-id="1">
+            <img src="PRATOS/1.png" alt="Vatapá paraense com camarão seco e arroz" loading="lazy">
+          </div>
+
+          <div class="gallery-slide is-next" data-id="2">
+            <img src="PRATOS/2.png" alt="Tacacá na cuia com jambu e camarão no palito" loading="lazy">
+          </div>
+
+          <div class="gallery-slide is-hidden" data-id="3">
+            <img src="PRATOS/3.png" alt="Tacacá tradicional com tucupi borbulhante e cumbucas" loading="lazy">
+          </div>
+
+          <div class="gallery-slide is-hidden" data-id="4">
+            <img src="PRATOS/4.png" alt="Preparo especial de pratos típicos paraenses" loading="lazy">
+          </div>
+
+          <div class="gallery-slide is-hidden" data-id="5">
+            <img src="PRATOS/5.png" alt="Mesa farta com sabores autênticos do Pará" loading="lazy">
+          </div>
+
+          <div class="gallery-slide is-hidden" data-id="6">
+            <img src="PRATOS/6.png" alt="Acompanhamentos e porções típicas nortistas" loading="lazy">
+          </div>
+
+          <div class="gallery-slide is-prev" data-id="7">
+            <img src="REFERENCIAS/MANIÇOBA.png" alt="Maniçoba tradicional cozida com maniva" loading="lazy">
+          </div>
+
+        </div>
+
+        <!-- Controles Interativos -->
+        <div class="gallery-controls">
+          <button class="gallery-btn gallery-prev" type="button" aria-label="Foto anterior">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          
+          <div class="gallery-dots"></div>
+
+          <button class="gallery-btn gallery-next" type="button" aria-label="Próxima foto">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Fechamento & CTA -->
+      <div class="real-dishes-closing reveal-on-scroll">
+        <p class="real-dishes-text">
+          “Cada prato carrega um pouco da história, da cultura e das tradições do Pará. Preparados com ingredientes regionais e muito carinho, nossos sabores preservam a essência da culinária paraense e proporcionam uma experiência que vai muito além da mesa.”
+        </p>
+        <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-primary pulse-gold">
+          <span>Quero conhecer o cardápio!</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">★</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 08: DOBRA 06 — PROVA SOCIAL (AVALIAÇÕES REAIS DO GOOGLE)
+       ======================================================================== -->
+  <section class="social-proof-section" id="prova-social">
+    <div class="container">
+      
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-badge badge-center">PROVA SOCIAL & CONFIANÇA</span>
+        <h2 class="section-title">O que dizem os clientes que já viveram essa experiência.</h2>
+        <p class="section-subtitle">
+          Histórias, registros espontâneos e avaliações reais de quem já sentiu o afeto do Pará em Joinville.
+        </p>
+      </div>
+
+      <!-- Banner de Destaque Google -->
+      <div class="google-rating-banner reveal-on-scroll">
+        <div class="rating-score-group">
+          <div class="rating-number">5.0</div>
+          <div>
+            <div class="rating-stars">★★★★★</div>
+            <div class="rating-label">Avaliações verificadas no Google</div>
+          </div>
+        </div>
+
+        <a href="https://www.google.com/maps/place/R.+Marqu%C3%AAs+de+Maric%C3%A1,+76+-+Vila+Nova/@-26.2874399,-48.9079608,25a,75y,268.64h,96.51t/data=!3m7!1e1!3m5!1s60C-3FKbFtiSiH8bqwNzCg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.googleusercontent.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-6.512287127006459%26panoid%3D60C-3FKbFtiSiH8bqwNzCg%26yaw%3D268.6387619610397!7i16384!8i8192!4m7!3m6!1s0x94dea53b7d0821a3:0xeb322b729b95f8e6!4b1!8m2!3d-26.2879995!4d-48.9081356!16s%2Fg%2F11vkdcs3c3?hl=pt-BR&entry=ttu" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+          <span>Consultar Avaliações no Google Maps</span>
+        </a>
+      </div>
+
+      <!-- Depoimentos Reais com Círculo de Inicial, Nome, Qtd de Avaliações e Texto -->
+      <div class="reviews-grid stagger-group">
+        
+        <!-- DEPOIMENTO 01: MARLEY CIRIACO -->
+        <div class="review-card stagger-item">
+          <div class="review-header">
+            <div class="review-avatar">M</div>
+            <div>
+              <div class="review-author">Marley Ciriaco</div>
+              <div class="review-meta">1 avaliação</div>
+            </div>
+          </div>
+          <div class="rating-stars" style="margin-bottom: 0.75rem;">★★★★★</div>
+          <p class="review-text">
+            “Maravilhoso em todos os sentidos. Atendimento nota 10, Comida nota 10...”
+          </p>
+        </div>
+
+        <!-- DEPOIMENTO 02: LARISSA ANJOS -->
+        <div class="review-card stagger-item">
+          <div class="review-header">
+            <div class="review-avatar">L</div>
+            <div>
+              <div class="review-author">Larissa Anjos</div>
+              <div class="review-meta">10 avaliações</div>
+            </div>
+          </div>
+          <div class="rating-stars" style="margin-bottom: 0.75rem;">★★★★★</div>
+          <p class="review-text">
+            “Ambiente confortável e muito bonito, as comidas são maravilhosas e deliciosas e atendimento muito bom, com certeza virei mais vezes.”
+          </p>
+        </div>
+
+        <!-- DEPOIMENTO 03: CAROL LOBO -->
+        <div class="review-card stagger-item">
+          <div class="review-header">
+            <div class="review-avatar">C</div>
+            <div>
+              <div class="review-author">Carol Lobo</div>
+              <div class="review-meta">1 avaliação</div>
+            </div>
+          </div>
+          <div class="rating-stars" style="margin-bottom: 0.75rem;">★★★★★</div>
+          <p class="review-text">
+            “Comida perfeita de maravilhosa, sabor delicioso. Atendimento maravilhoso...”
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">✦</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 09: DOBRA 07 — CULTURA PARAENSE
+       ======================================================================== -->
+  <section class="culture-section" id="cultura-para">
+    <div class="container">
+      
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-badge badge-center">RAÍZES & IDENTIDADE</span>
+        <h2 class="section-title">Cultura Paraense</h2>
+        <p class="section-subtitle">
+          O Pará pulsa cultura! São cores, aromas, sons, sabores e tradições que despertam emoções e conectam gerações. Aqui, fazemos muito mais do que servir comida: compartilhamos nossas raízes e convidamos você a mergulhar na riqueza da cultura paraense.
+        </p>
+      </div>
+
+      <div class="culture-impact-phrase reveal-on-scroll">
+        “Mais do que conhecer novos sabores, é sentir a essência de uma cultura inteira.”
+      </div>
+
+      <!-- Três Cards Culturais com Vídeos Cinematográficos -->
+      <div class="culture-cards-grid stagger-group">
+        
+        <!-- CARD 01: CÍRIO DE NAZARÉ (VÍDEO 01) -->
+        <article class="culture-card stagger-item">
+          <div class="culture-card-banner">
+            <video autoplay muted loop playsinline poster="CAPA/1.jpg">
+              <source src="VIDEOS/cirio.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="culture-card-body">
+            <h3 class="culture-card-title">Círio de Nazaré</h3>
+            <div class="culture-card-subtitle">Fé que une gerações</div>
+            <p class="culture-card-text">
+              Uma das maiores manifestações religiosas do Brasil e uma das celebrações mais importantes da cultura paraense. Todos os anos, milhões de fiéis se reúnem em Belém para homenagear Nossa Senhora de Nazaré, em uma demonstração emocionante de fé, devoção, tradição e união que atravessa gerações.
+            </p>
+          </div>
+        </article>
+
+        <!-- CARD 02: CARIMBÓ E RITMOS (VÍDEO 02) -->
+        <article class="culture-card stagger-item">
+          <div class="culture-card-banner">
+            <video autoplay muted loop playsinline poster="LOJA/1.png">
+              <source src="VIDEOS/carimbo.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="culture-card-body">
+            <h3 class="culture-card-title">Carimbó e Ritmos</h3>
+            <div class="culture-card-subtitle">O Pará que dança!</div>
+            <p class="culture-card-text">
+              Uma das mais tradicionais expressões culturais do Pará! Ao som dos tambores e instrumentos regionais, o Carimbó mistura música, dança e tradição em movimentos cheios de alegria, cores e histórias que atravessam gerações.
+            </p>
+          </div>
+        </article>
+
+        <!-- CARD 03: TRADIÇÕES RIBEIRINHAS (VÍDEO 03) -->
+        <article class="culture-card stagger-item">
+          <div class="culture-card-banner">
+            <video autoplay muted loop playsinline poster="LOJA/4.png">
+              <source src="VIDEOS/ribeirinho.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="culture-card-body">
+            <h3 class="culture-card-title">Tradições Ribeirinhas</h3>
+            <div class="culture-card-subtitle">Onde os rios contam histórias</div>
+            <p class="culture-card-text">
+              A vida às margens dos rios amazônicos é marcada por uma relação profunda com as águas. Para muitas comunidades, o rio é caminho, fonte de sustento, espaço de convivência e parte essencial do dia a dia. Um modo de viver que revela a riqueza dos saberes, dos costumes e das tradições transmitidas de geração em geração.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">🌿</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 10: DOBRA 08 — INGREDIENTES E RAÍZES
+       ======================================================================== -->
+  <section class="ingredients-section" id="ingredientes">
+    <div class="container">
+      
+      <!-- Primeiro Bloco: Jambu e Tucupi -->
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-badge badge-center">ALQUIMIA DA AMAZÔNIA</span>
+        <h2 class="section-title">Os Segredos do Jambu e do Tucupi</h2>
+        <p class="section-subtitle">
+          Do formigamento marcante do jambu ao sabor inconfundível do tucupi, descubra os ingredientes que dão alma à gastronomia do Pará.
+        </p>
+      </div>
+
+      <div class="ingredients-duo-grid stagger-group">
+        
+        <!-- CARD 01: JAMBU -->
+        <div class="ingredient-card stagger-item">
+          <div class="ingredient-tag">ERVA SAGRADA</div>
+          <h3 class="ingredient-name">Jambu</h3>
+          <div class="ingredient-punchline">“A erva que faz formigar.”</div>
+          <p class="ingredient-text">
+            O jambu é muito mais que uma erva: é uma experiência! Suas folhas provocam um formigamento característico na boca, uma sensação surpreendente que desperta os sentidos e torna a culinária paraense ainda mais especial.
+          </p>
+        </div>
+
+        <!-- CARD 02: TUCUPI -->
+        <div class="ingredient-card stagger-item">
+          <div class="ingredient-tag">TESOURO PARAENSE</div>
+          <h3 class="ingredient-name">Tucupi</h3>
+          <div class="ingredient-punchline">“O ouro líquido da Amazônia.”</div>
+          <p class="ingredient-text">
+            Extraído da mandioca brava, o tucupi é um dos grandes tesouros da culinária paraense. Seu preparo tradicional exige conhecimento, cuidado e paciência, transformando esse ingrediente em uma das bases mais marcantes dos sabores amazônicos.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Segundo Bloco: A Força do Povo Nortista -->
+      <div class="nortista-people-card reveal-on-scroll">
+        <span class="section-badge badge-center">IDENTIDADE & CORAÇÃO</span>
+        <h3 class="nortista-title">A Força do Povo Nortista</h3>
+        <div class="nortista-subtitle">Um povo de raízes fortes, tradições vivas e um coração que acolhe.</div>
+        <p class="nortista-text">
+          Nosso povo carrega a força das águas, a sabedoria da floresta e a riqueza de tradições que atravessam gerações. É um povo de coração acolhedor, marcado pela simplicidade, pela alegria e pelo orgulho de suas raízes. Essa essência está presente em nossa cultura, em nossa história e em cada prato que servimos.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">✦</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 11: DOBRA 09 — NOSSO ESPAÇO
+       ======================================================================== -->
+  <section class="our-space-section" id="nosso-espaco">
+    <div class="container">
+      
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-badge badge-center">CONHEÇA NOSSO ESPAÇO</span>
+        <h2 class="section-title">Um pedacinho do Pará em Joinville, preparado para receber você com carinho.</h2>
+        <p class="space-intro">
+          Nosso espaço foi pensado para acolher você em uma verdadeira experiência paraense. Cada detalhe carrega um pouco da nossa cultura, das nossas raízes e da hospitalidade do Norte do Brasil. Venha conhecer nosso cantinho, sentir-se em casa e viver momentos especiais ao redor de sabores e tradições que encantam.
+          <span class="space-impact-phrase">“Entre, fique à vontade e sinta-se um pouquinho mais perto do Pará!”</span>
+        </p>
+      </div>
+
+      <!-- Galeria do Ambiente com as 5 Fotografias Reais -->
+      <div class="gallery-3d-container" id="space-gallery">
+        <div class="gallery-stage">
+          
+          <div class="gallery-slide is-active" data-id="1">
+            <img src="LOJA/1.png" alt="FOTO-01: Fachada envidraçada do restaurante Sabores do Norte com letreiro e cardápio de produtos" loading="lazy">
+            <div class="gallery-slide-tag">
+              <span>FOTO-01 · Fachada & Boas-Vindas</span>
+              <span class="auth-badge">Espaço Real</span>
+            </div>
+          </div>
+
+          <div class="gallery-slide is-next" data-id="2">
+            <img src="LOJA/2.png" alt="FOTO-02: Salão interno com letreiro neon Sabores do Norte, parede verde e chapéus regionais" loading="lazy">
+            <div class="gallery-slide-tag">
+              <span>FOTO-02 · Salão Principal & Painel Neon</span>
+              <span class="auth-badge">Espaço Real</span>
+            </div>
+          </div>
+
+          <div class="gallery-slide is-hidden" data-id="3">
+            <img src="LOJA/3.png" alt="FOTO-03: Mesas de madeira aconchegantes e ambiente climatizado" loading="lazy">
+            <div class="gallery-slide-tag">
+              <span>FOTO-03 · Mesas Familiares</span>
+              <span class="auth-badge">Espaço Real</span>
+            </div>
+          </div>
+
+          <div class="gallery-slide is-hidden" data-id="4">
+            <img src="LOJA/4.png" alt="FOTO-04: Detalhes da decoração acolhedora e artesanato regional" loading="lazy">
+            <div class="gallery-slide-tag">
+              <span>FOTO-04 · Detalhes Culturais</span>
+              <span class="auth-badge">Espaço Real</span>
+            </div>
+          </div>
+
+          <div class="gallery-slide is-prev" data-id="5">
+            <img src="LOJA/5.png" alt="FOTO-05: Prateleiras do empório com produtos genuínos do Pará para levar para casa" loading="lazy">
+            <div class="gallery-slide-tag">
+              <span>FOTO-05 · Empório & Ingredientes</span>
+              <span class="auth-badge">Espaço Real</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controles Interativos -->
+        <div class="gallery-controls">
+          <button class="gallery-btn gallery-prev" type="button" aria-label="Foto anterior do espaço">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+          </button>
+          
+          <div class="gallery-dots"></div>
+
+          <button class="gallery-btn gallery-next" type="button" aria-label="Próxima foto do espaço">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- Bloco Final: Ambiente Familiar e Acolhedor -->
+      <div class="space-closing-card reveal-on-scroll">
+        <h3 class="space-closing-title">Ambiente Familiar e Acolhedor</h3>
+        <div class="space-closing-subtitle">Um lugar onde a cultura paraense encontra o aconchego de se sentir em casa.</div>
+        <p class="space-closing-text">
+          Nosso espaço foi pensado com carinho para oferecer uma experiência especial, unindo o conforto de um ambiente familiar à riqueza da cultura paraense. Cada detalhe contribui para criar uma atmosfera acolhedora, onde você pode compartilhar bons momentos, descobrir novos sabores e se sentir em casa.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Divisor Orgânico -->
+  <div class="section-divider" aria-hidden="true">
+    <span class="divider-icon">📍</span>
+  </div>
+
+  <!-- ========================================================================
+       BLOCO 12: DOBRA 10 — LOCALIZAÇÃO, CONTATO & HORÁRIOS
+       ======================================================================== -->
+  <section class="location-section" id="localizacao">
+    <div class="container">
+      
+      <div class="section-header text-center reveal-on-scroll">
+        <span class="section-badge badge-center">ONDE NOS ENCONTRAR</span>
+        <h2 class="section-title">Nossa Localização</h2>
+        <p class="section-subtitle">Estamos em Joinville, prontos para receber você com o melhor da culinária paraense!</p>
+      </div>
+
+      <div class="location-grid">
+        
+        <!-- Coluna de Informações e Horários -->
+        <div class="location-info-col reveal-on-scroll" id="contato">
+          
+          <div class="address-box">
+            <div class="address-label">Endereço Oficial</div>
+            <p class="address-text">
+              Rua Marquês de Maricá, 76 — Vila Nova<br>
+              Joinville — SC, Brasil
+            </p>
+            <p style="font-size: 0.95rem; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1.5rem;">
+              Venha conhecer o Sabores do Norte! Será um prazer receber você em nosso cantinho paraense em Joinville. Esperamos por sua visita com muita hospitalidade, sabores autênticos e, claro, um delicioso tacacá quentinho!
+            </p>
+
+            <!-- Horários de Funcionamento Estruturados -->
+            <div class="address-label" style="margin-top: 1.5rem;">Horários de Funcionamento</div>
+            <ul class="hours-schedule">
+              <li class="hours-item">
+                <span class="hours-day">Segunda-feira</span>
+                <span class="hours-time" style="color: #e57373;">Fechado</span>
+              </li>
+              <li class="hours-item">
+                <span class="hours-day">Terça a Quinta-feira</span>
+                <span class="hours-time">08h30 às 20h <small>(venda de produtos)</small></span>
+              </li>
+              <li class="hours-item highlight-delivery">
+                <div>
+                  <span class="hours-day">Sexta-feira a Domingo</span>
+                  <span class="delivery-badge-note">★ Pratos Típicos & Delivery Ativo!</span>
+                </div>
+                <span class="hours-time">08h30 às 22h</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- CTAs de Ação Imediata -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <a href="https://wa.me/554789294647?text=Ol%C3%A1!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20Sabores%20do%20Norte" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm5.77 14.07c-.24.67-1.39 1.29-1.92 1.37-.5.08-1.15.11-3.32-.78-2.6-1.07-4.27-3.71-4.4-3.89-.13-.18-1.06-1.41-1.06-2.69s.67-1.9 1.06-2.16c.39-.26.85-.33 1.13-.33.28 0 .56 0 .8.01.26.02.61-.1.95.72.35.85 1.18 2.88 1.28 3.09.11.21.18.45.04.72-.14.28-.21.45-.42.7-.21.24-.45.54-.64.73-.21.21-.43.44-.19.86.24.42 1.07 1.77 2.3 2.87 1.58 1.41 2.91 1.85 3.33 2.06.42.21.67.18.91-.1.25-.28 1.06-1.23 1.34-1.66.28-.42.56-.35.95-.21.39.14 2.49 1.18 2.92 1.39.42.21.71.32.81.49.11.18.11 1.02-.13 1.69z"/></svg>
+              <span>Fale conosco pelo WhatsApp</span>
+            </a>
+
+            <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M8.1 13.34l2.83-2.83L3.91 3.5a4.008 4.008 0 000 5.66l4.19 4.18zm6.78-1.81c1.53.71 3.68.21 5.27-1.38 1.91-1.91 2.28-4.65.81-6.12-1.46-1.46-4.2-1.1-6.12.81-1.59 1.59-2.09 3.74-1.38 5.27L3.7 19.87l1.41 1.41L12 14.41l6.88 6.88 1.41-1.41L14.88 11.53z"/></svg>
+              <span>Ver Cardápio Online</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Coluna do Mapa com Efeito Visual de Marcador e Link Oficial -->
+        <div class="map-frame-wrapper reveal-on-scroll">
+          <div class="map-viewport">
+            
+            <!-- Pin Marcador Aéreo Estilizado -->
+            <div class="map-aerial-overlay">
+              <div class="map-pulse-dot"></div>
+              <div>
+                <div class="map-pin-title">ESTAMOS AQUI</div>
+                <div style="font-size: 0.78rem; color: #FAF6EF;">Sabores do Norte · Sala 02</div>
+              </div>
+            </div>
+
+            <!-- Google Maps Incorporado -->
+            <iframe 
+              class="map-iframe"
+              src="https://maps.google.com/maps?q=-26.2879995,-48.9081356&hl=pt-BR&z=17&output=embed" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"
+              title="Localização do restaurante Sabores do Norte em Joinville">
+            </iframe>
+          </div>
+
+          <!-- Barra de Ações do Mapa -->
+          <div class="map-actions-bar">
+            <span style="font-size: 0.88rem; color: var(--color-text-secondary);">
+              📍 Rua Marquês de Maricá, 76 — Vila Nova
+            </span>
+            <a href="https://www.google.com/maps/place/R.+Marqu%C3%AAs+de+Maric%C3%A1,+76+-+Vila+Nova/@-26.2874399,-48.9079608,25a,75y,268.64h,96.51t/data=!3m7!1e1!3m5!1s60C-3FKbFtiSiH8bqwNzCg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.googleusercontent.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-6.512287127006459%26panoid%3D60C-3FKbFtiSiH8bqwNzCg%26yaw%3D268.6387619610397!7i16384!8i8192!4m7!3m6!1s0x94dea53b7d0821a3:0xeb322b729b95f8e6!4b1!8m2!3d-26.2879995!4d-48.9081356!16s%2Fg%2F11vkdcs3c3?hl=pt-BR&entry=ttu" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.5rem 1rem; font-size: 0.8rem;">
+              <span>Abrir no Google Maps</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"/></svg>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BLOCO 12: RODAPÉ COMPLETO & ENCERRAMENTO DA EXPERIÊNCIA
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- Encerramento Emocional -->
+      <div class="footer-emotional-closure reveal-on-scroll">
+        <div class="footer-signature-phrase">“Um pedacinho do Pará na sua mesa.”</div>
+        <div class="footer-signature-sub">Sabores do Norte · Culinária Paraense Autêntica em Joinville — SC</div>
+      </div>
+
+      <div class="footer-top">
+        
+        <!-- Coluna 1: Marca & Apresentação -->
+        <div class="footer-brand-col">
+          <div class="footer-logo-wrap">
+            <img src="CAPA/logo.png" alt="Sabores do Norte" class="footer-logo-img" width="52" height="52">
+            <div>
+              <div style="font-family: var(--font-heading); font-size: 1.15rem; font-weight: 700; color: #FAF6EF; text-transform: uppercase;">Sabores do Norte</div>
+              <div style="font-size: 0.72rem; color: var(--color-gold-amber); letter-spacing: 0.15em; text-transform: uppercase;">Culinária Paraense</div>
+            </div>
+          </div>
+          <p class="footer-tagline">
+            Restaurante e empório de culinária paraense em Joinville — SC. Sabores genuínos, ingredientes tradicionais trazidos do Pará e o calor da nossa gente.
+          </p>
+          <div style="display: flex; gap: 0.75rem; margin-top: 0.5rem;">
+            <a href="https://www.instagram.com/sabores.do.nortejoinville/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 0.45rem 0.85rem; font-size: 0.78rem;">
+              <span>@sabores.do.nortejoinville</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Navegação Rápida -->
+        <div>
+          <h4 class="footer-heading">Navegação</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#inicio" class="footer-nav-link">Início</a></li>
+            <li><a href="#comidas-tipicas" class="footer-nav-link">Comidas Típicas</a></li>
+            <li><a href="#nosso-espaco" class="footer-nav-link">Nosso Espaço</a></li>
+            <li><a href="#nossa-historia" class="footer-nav-link">Nossa História</a></li>
+            <li><a href="#cultura-para" class="footer-nav-link">Cultura do Pará</a></li>
+            <li><a href="#nossos-pratos" class="footer-nav-link">Nossos Pratos</a></li>
+            <li><a href="#localizacao" class="footer-nav-link">Localização</a></li>
+            <li><a href="#contato" class="footer-nav-link">Contato & WhatsApp</a></li>
+          </ul>
+        </div>
+
+        <!-- Coluna 3: Informações & Contato -->
+        <div>
+          <h4 class="footer-heading">Atendimento</h4>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+              <span>Rua Marquês de Maricá, 76 — Vila Nova, Joinville — SC</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+              <span>WhatsApp: (47) 8929-4647</span>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              <span>Sex a Dom: 08h30 às 22h (Pratos & Delivery)</span>
+            </li>
+          </ul>
+
+          <div style="margin-top: 1.5rem;">
+            <a href="https://instadelivery.com.br/saboresdonortesc" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.65rem 1.25rem; font-size: 0.8rem; width: 100%;">
+              <span>Pedir no InstaDelivery</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Rodapé Inferior: Direitos Autorais Dinâmicos -->
+      <div class="footer-bottom">
+        <div>
+          &copy; <span id="current-year">2026</span> Sabores do Norte. Todos os direitos reservados.
+        </div>
+        <div>
+          Feito com afeto e orgulho das raízes amazônicas.
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Scripts Modulares -->
+  <script src="js/header.js"></script>
+  <script src="js/galleries.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cursor.js"></script>
+</body>
+</html>

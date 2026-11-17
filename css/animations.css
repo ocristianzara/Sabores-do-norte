@@ -1,0 +1,75 @@
+/* ==========================================================================
+   SABORES DO NORTE — ANIMAÇÕES & SISTEMA GLOBAL DE TRANSIÇÕES
+   Performance Otimizada & Respeito a prefers-reduced-motion
+   ========================================================================== */
+
+/* Elementos com Revelação ao Rolar a Página */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Escalonamento (Stagger) de Itens em Grupo */
+.stagger-group .stagger-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stagger-group.is-revealed .stagger-item:nth-child(1) { transition-delay: 0.05s; }
+.stagger-group.is-revealed .stagger-item:nth-child(2) { transition-delay: 0.15s; }
+.stagger-group.is-revealed .stagger-item:nth-child(3) { transition-delay: 0.25s; }
+.stagger-group.is-revealed .stagger-item:nth-child(4) { transition-delay: 0.35s; }
+.stagger-group.is-revealed .stagger-item:nth-child(5) { transition-delay: 0.45s; }
+.stagger-group.is-revealed .stagger-item:nth-child(6) { transition-delay: 0.55s; }
+
+.stagger-group.is-revealed .stagger-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Efeito de Pulso Sutil de Ouro */
+@keyframes goldPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(229, 169, 60, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 8px rgba(229, 169, 60, 0);
+  }
+}
+
+.pulse-gold {
+  animation: goldPulse 2.8s infinite;
+}
+
+/* Respeito Rigoroso à Preferência por Movimento Reduzido (Bloco 01) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal-on-scroll,
+  .stagger-group .stagger-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .hero-video {
+    transform: none !important;
+  }
+}

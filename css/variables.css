@@ -1,0 +1,98 @@
+/* ==========================================================================
+   SABORES DO NORTE — DESIGN TOKENS & SYSTEM VARIABLES
+   Identidade: Sofisticação Cinematográfica + Raízes Amazônicas & Paraenses
+   ========================================================================== */
+
+:root {
+  /* --- PALETA CROMÁTICA: SOFISTICAÇÃO AMAZÔNICA --- */
+  
+  /* Fundos & Superfícies Dark Cinema */
+  --color-bg-deep: #080506;          /* Preto açaí profundo / imersivo */
+  --color-bg-main: #0E0A0B;          /* Superfície principal */
+  --color-bg-surface: #171113;       /* Cards e containers */
+  --color-bg-surface-elevated: #21181B; /* Camadas sobrepostas */
+  
+  /* Glassmorphism & Transparências */
+  --glass-header-initial: rgba(11, 7, 9, 0.45);
+  --glass-header-scrolled: rgba(13, 8, 10, 0.92);
+  --glass-card: rgba(26, 18, 22, 0.65);
+  --glass-card-hover: rgba(38, 26, 32, 0.85);
+  --glass-border: rgba(235, 175, 75, 0.16);
+  --glass-border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-border-focus: rgba(243, 192, 83, 0.45);
+  
+  /* Cores de Raiz & Destaque (Pará / Amazônia) */
+  --color-gold-tucupi: #F2A900;      /* Amarelo vibrante do tucupi tradicional */
+  --color-gold-amber: #E5A93C;       /* Ouro âmbar sofisticado */
+  --color-gold-light: #F7D58C;       /* Luz dourada e reflexos */
+  --color-gold-dark: #B3781E;        /* Tom ouro envelhecido / bronze */
+  
+  --color-acai-deep: #38081E;        /* Púrpura denso de polpa de açaí */
+  --color-acai-vibrant: #661036;     /* Destaque açaí paraense */
+  --color-urucum: #D94625;           /* Vermelho quente de urucum e pimenta */
+  --color-floresta: #133D2D;         /* Verde profundo da mata amazônica */
+  --color-floresta-leaf: #2A6F4E;    /* Verde viçoso / jambu fresco */
+  
+  /* Tipografia & Textos */
+  --color-text-primary: #FAF6EF;     /* Branco marfim / linho natural */
+  --color-text-secondary: #D4C7BA;   /* Bege acinzentado elegante */
+  --color-text-muted: #9E8F82;       /* Texto atenuado / leitura secundária */
+  --color-text-gold: #F5BE5D;        /* Dourado para títulos e realces */
+  
+  /* Gradientes de Assinatura */
+  --gradient-gold: linear-gradient(135deg, #F3C053 0%, #E5A93C 50%, #B8781B 100%);
+  --gradient-gold-hover: linear-gradient(135deg, #FCE09B 0%, #F0B746 50%, #C78623 100%);
+  --gradient-hero-overlay: linear-gradient(180deg, rgba(8, 5, 6, 0.7) 0%, rgba(8, 5, 6, 0.4) 40%, rgba(8, 5, 6, 0.95) 100%);
+  --gradient-glow: radial-gradient(circle, rgba(229, 169, 60, 0.15) 0%, rgba(8, 5, 6, 0) 70%);
+
+  /* --- TIPOGRAFIA --- */
+  --font-heading: 'Cinzel', 'Playfair Display', Georgia, serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-accent: 'Cinzel Decorative', 'Cinzel', Georgia, serif;
+
+  /* Tamanhos de Fonte Fluídos */
+  --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.8125rem);
+  --font-size-sm: clamp(0.8125rem, 0.78rem + 0.3vw, 0.875rem);
+  --font-size-base: clamp(0.9375rem, 0.9rem + 0.35vw, 1.0625rem);
+  --font-size-md: clamp(1.0625rem, 1rem + 0.5vw, 1.25rem);
+  --font-size-lg: clamp(1.25rem, 1.15rem + 0.75vw, 1.5rem);
+  --font-size-xl: clamp(1.625rem, 1.45rem + 1.1vw, 2.125rem);
+  --font-size-2xl: clamp(2.125rem, 1.85rem + 1.8vw, 3rem);
+  --font-size-hero: clamp(2.75rem, 2.2rem + 3vw, 4.5rem);
+
+  /* --- ESPAÇAMENTOS & ESTRUTURA --- */
+  --header-height: 88px;
+  --header-height-scrolled: 72px;
+  --header-height-mobile: 74px;
+  --container-max-width: 1280px;
+  --container-padding: clamp(1rem, 4vw, 2.5rem);
+  
+  /* Borda & Arredondamento */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-pill: 9999px;
+
+  /* Sombras Cinematográficas */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 10px 28px -6px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 48px -10px rgba(0, 0, 0, 0.7);
+  --shadow-gold: 0 6px 24px -4px rgba(229, 169, 60, 0.35);
+  --shadow-gold-hover: 0 10px 32px 0 rgba(229, 169, 60, 0.5);
+
+  /* Transições Fluidas */
+  --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-elastic: cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  /* Z-Index Hierarchy */
+  --z-negative: -1;
+  --z-normal: 1;
+  --z-sticky: 100;
+  --z-header: 1000;
+  --z-backdrop: 1050;
+  --z-drawer: 1100;
+  --z-modal: 1200;
+  --z-toast: 1300;
+}

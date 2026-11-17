@@ -1,0 +1,191 @@
+/* ==========================================================================
+   SABORES DO NORTE — BASE STYLES & RESET
+   ========================================================================== */
+
+/* Modern CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-primary);
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: 1.6;
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Compensação suave do Header Fixo em todas as seções */
+section,
+[id] {
+  scroll-margin-top: calc(var(--header-height-scrolled) + 1.25rem);
+}
+
+/* Imagens & Mídias */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Links & Botões */
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+button {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: inherit;
+}
+
+/* Foco Acessível */
+:focus-visible {
+  outline: 2px solid var(--color-gold-amber);
+  outline-offset: 3px;
+  border-radius: var(--radius-sm);
+}
+
+/* Skip Link para Leitores de Tela e Navegação por Teclado */
+.skip-link {
+  position: absolute;
+  top: -100px;
+  left: 1rem;
+  background: var(--color-gold-amber);
+  color: #080506;
+  padding: 0.75rem 1.25rem;
+  font-weight: 700;
+  font-size: var(--font-size-sm);
+  z-index: 99999;
+  border-radius: var(--radius-sm);
+  transition: top var(--transition-fast);
+  box-shadow: var(--shadow-lg);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+/* Container Responsivo Padronizado */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+}
+
+/* Tipografia Base */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+/* Classes Utilitárias */
+.text-gold {
+  color: var(--color-gold-amber);
+}
+
+.text-gold-gradient {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Desabilita rolagem do body quando menu mobile está aberto */
+body.menu-open {
+  overflow: hidden;
+  touch-action: none;
+}
+
+/* ==========================================================================
+   CURSOR PERSONALIZADO: SEMENTE DE AÇAÍ & RASTRO DE LUZ MÁGICA
+   ========================================================================== */
+@media (pointer: fine) {
+  body {
+    cursor: default;
+  }
+
+  #acai-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 32px;
+    height: 32px;
+    pointer-events: none;
+    z-index: 999999;
+    will-change: transform;
+    filter: drop-shadow(0 0 8px rgba(186, 75, 237, 0.75));
+    transition: filter 0.25s ease, scale 0.2s ease;
+  }
+
+  #acai-cursor img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    animation: acaiSpin 12s linear infinite;
+  }
+
+  #acai-cursor.cursor-hover {
+    filter: drop-shadow(0 0 14px rgba(214, 112, 247, 0.95)) drop-shadow(0 0 22px rgba(142, 36, 170, 0.6));
+    scale: 1.25;
+  }
+
+  #cursor-trail-canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 999998;
+  }
+
+  @keyframes acaiSpin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+}
+

@@ -1,0 +1,1489 @@
+/* ==========================================================================
+   SABORES DO NORTE — SECTIONS STYLING (DOBRAS 01 A 10)
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   DOBRA 01: HERO / INÍCIO (#inicio)
+   -------------------------------------------------------------------------- */
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--header-height) + 2rem) 0 4rem;
+  overflow: hidden;
+  background-color: var(--color-bg-deep);
+}
+
+.hero-media-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.hero-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.65) contrast(1.1);
+  transform: scale(1.04);
+  transition: transform 8s ease-out;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 40%, rgba(13, 8, 10, 0.3) 0%, rgba(8, 5, 6, 0.85) 85%, #080506 100%),
+              linear-gradient(180deg, rgba(8, 5, 6, 0.7) 0%, rgba(8, 5, 6, 0.25) 45%, #080506 100%);
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: clamp(0.72rem, 0.68rem + 0.3vw, 0.85rem);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--color-gold-light);
+  margin-bottom: 1.5rem;
+  background: rgba(18, 12, 14, 0.6);
+  padding: 0.45rem 1.25rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(229, 169, 60, 0.3);
+  backdrop-filter: blur(8px);
+}
+
+.hero-tag-line {
+  display: inline-block;
+  width: 26px;
+  height: 1.5px;
+  background: var(--gradient-gold);
+}
+
+.hero-title {
+  font-size: var(--font-size-hero);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-primary);
+  text-shadow: 0 4px 30px rgba(0, 0, 0, 0.8);
+}
+
+.hero-title-highlight {
+  background: var(--gradient-gold);
+  -webkit-background-clip: text;
+  -webkit-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.hero-subtitle {
+  font-size: clamp(1.05rem, 0.95rem + 0.6vw, 1.35rem);
+  font-weight: 400;
+  color: var(--color-text-secondary);
+  max-width: 680px;
+  margin: 0 auto 2.5rem;
+  line-height: 1.6;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.7);
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.hero-scroll-indicator {
+  position: absolute;
+  bottom: 1.75rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--color-text-muted);
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  z-index: 2;
+  transition: color var(--transition-fast);
+}
+
+.hero-scroll-indicator:hover {
+  color: var(--color-gold-amber);
+}
+
+.mouse-icon {
+  width: 22px;
+  height: 34px;
+  border: 2px solid rgba(229, 169, 60, 0.5);
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  padding-top: 6px;
+}
+
+.mouse-wheel {
+  width: 3px;
+  height: 7px;
+  background-color: var(--color-gold-amber);
+  border-radius: 2px;
+  animation: mouseWheel 1.8s infinite;
+}
+
+@keyframes mouseWheel {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0; }
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 02: NOSSA ESSÊNCIA (#nossa-essencia)
+   -------------------------------------------------------------------------- */
+.essence-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background: linear-gradient(180deg, #080506 0%, #100B0D 50%, #080506 100%);
+}
+
+.essence-intro {
+  max-width: 820px;
+  margin: 0 auto clamp(2.5rem, 4vw, 3.5rem);
+  text-align: center;
+  font-size: clamp(1.1rem, 1rem + 0.4vw, 1.28rem);
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.essence-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+@media (min-width: 900px) {
+  .essence-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Interação Exclusiva dos Cards de Essência (Requisito Bloco 04) */
+.essence-card {
+  background: rgba(22, 14, 18, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 3vw, 2.5rem);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color 0.4s ease,
+              box-shadow 0.4s ease,
+              background-color 0.4s ease,
+              opacity 0.4s ease;
+}
+
+.essence-card-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(229, 169, 60, 0.12);
+  border: 1px solid rgba(229, 169, 60, 0.25);
+  color: var(--color-gold-amber);
+  margin-bottom: 1.5rem;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.essence-card-number {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgba(229, 169, 60, 0.18);
+}
+
+.essence-card-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+}
+
+.essence-card-text {
+  font-size: 0.96rem;
+  line-height: 1.65;
+  color: var(--color-text-secondary);
+}
+
+/* Card Ativo/Selecionado: diminui discretamente de escala e ganha iluminação & contraste superior */
+.essence-card.is-selected {
+  transform: scale(0.975);
+  background: rgba(36, 22, 29, 0.9);
+  border-color: var(--color-gold-amber);
+  box-shadow: 0 0 35px rgba(229, 169, 60, 0.28), inset 0 0 20px rgba(229, 169, 60, 0.12);
+  opacity: 1;
+}
+
+.essence-card.is-selected .essence-card-icon {
+  background: var(--gradient-gold);
+  color: #0b0709;
+  transform: scale(1.08);
+}
+
+.essence-card.is-selected .essence-card-number {
+  color: var(--color-gold-amber);
+}
+
+/* Quando um card está selecionado no grupo, os outros recebem menor ênfase visual */
+.essence-grid.has-selected .essence-card:not(.is-selected) {
+  opacity: 0.65;
+  border-color: rgba(255, 255, 255, 0.04);
+}
+
+.essence-outro {
+  max-width: 860px;
+  margin: 0 auto;
+  text-align: center;
+  padding: clamp(1.75rem, 3vw, 2.5rem);
+  background: rgba(25, 16, 20, 0.5);
+  border: 1px solid rgba(229, 169, 60, 0.2);
+  border-radius: var(--radius-lg);
+  font-style: italic;
+  font-size: clamp(1.05rem, 0.95rem + 0.4vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 03: NOSSA HISTÓRIA (#nossa-historia)
+   -------------------------------------------------------------------------- */
+.history-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background: radial-gradient(circle at 80% 20%, rgba(56, 8, 30, 0.18) 0%, transparent 60%),
+              #080506;
+}
+
+.history-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  align-items: center;
+  margin-bottom: clamp(3.5rem, 6vw, 5rem);
+}
+
+@media (min-width: 960px) {
+  .history-layout {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.history-narrative {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.history-block {
+  position: relative;
+  padding-left: 1.75rem;
+  border-left: 2px solid rgba(229, 169, 60, 0.25);
+  transition: border-color var(--transition-fast);
+}
+
+.history-block:hover {
+  border-color: var(--color-gold-amber);
+}
+
+.history-block-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--color-gold-light);
+  margin-bottom: 0.65rem;
+}
+
+.history-block-text {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.history-visual-frame {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(229, 169, 60, 0.3);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(0, 0, 0, 0.6);
+}
+
+.history-visual-frame img {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: cover;
+  transition: transform 0.8s ease;
+}
+
+.history-visual-frame:hover img {
+  transform: scale(1.03);
+}
+
+.history-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 5, 6, 0.95) 100%);
+  padding: 2rem 1.5rem 1.25rem;
+  color: var(--color-text-primary);
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Timeline Visual */
+.history-timeline {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+@media (min-width: 768px) {
+  .history-timeline {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.timeline-step {
+  background: rgba(22, 14, 18, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  position: relative;
+  transition: all var(--transition-fast);
+}
+
+.timeline-step:hover {
+  border-color: rgba(229, 169, 60, 0.35);
+  background: rgba(30, 20, 24, 0.7);
+  transform: translateY(-3px);
+}
+
+.timeline-year {
+  font-family: var(--font-heading);
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--color-gold-amber);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-label {
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-desc {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Citação de Destaque */
+.history-quote-box {
+  max-width: 920px;
+  margin: 0 auto;
+  position: relative;
+  background: linear-gradient(135deg, rgba(32, 18, 25, 0.7) 0%, rgba(18, 11, 14, 0.8) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 4vw, 3.5rem);
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.history-quote-icon {
+  font-family: var(--font-heading);
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--color-gold-amber);
+  opacity: 0.4;
+  margin-bottom: 0.75rem;
+}
+
+.history-quote-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 1.05rem + 0.6vw, 1.5rem);
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  margin-bottom: 1.75rem;
+  font-weight: 500;
+}
+
+.history-quote-signature {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.signature-phrase {
+  font-family: var(--font-accent);
+  font-size: 1.2rem;
+  color: var(--color-gold-light);
+  letter-spacing: 0.04em;
+}
+
+.signature-brand {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 04: COMIDAS TÍPICAS (#comidas-tipicas)
+   -------------------------------------------------------------------------- */
+.typical-dishes-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background: linear-gradient(180deg, #080506 0%, #120C0D 50%, #080506 100%);
+}
+
+.dish-cinematic-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(1.75rem, 3.5vw, 3rem);
+  align-items: center;
+  background: rgba(22, 14, 18, 0.6);
+  border: 1px solid rgba(229, 169, 60, 0.16);
+  border-radius: var(--radius-lg);
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  margin-bottom: 2.5rem;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: all var(--transition-normal);
+}
+
+@media (min-width: 920px) {
+  .dish-cinematic-card {
+    grid-template-columns: 1.15fr 0.85fr;
+  }
+  
+  .dish-cinematic-card.reverse {
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+  
+  .dish-cinematic-card.reverse .dish-media {
+    order: 2;
+  }
+}
+
+.dish-cinematic-card:hover {
+  border-color: rgba(229, 169, 60, 0.35);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+}
+
+.dish-media {
+  position: relative;
+  width: 100%;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background-color: #120a0d;
+  box-shadow: var(--shadow-md);
+}
+
+.dish-media video,
+.dish-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.dish-cinematic-card:hover .dish-media video,
+.dish-cinematic-card:hover .dish-media img {
+  transform: scale(1.04);
+}
+
+.dish-media-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: rgba(8, 5, 6, 0.75);
+  backdrop-filter: blur(8px);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(229, 169, 60, 0.3);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--color-gold-light);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.dish-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.dish-number {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-gold-amber);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.dish-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2.2rem);
+  color: var(--color-text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.dish-description {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+/* Bloco de Ingredientes Autênticos Chamada */
+.authentic-ingredients-callout {
+  background: radial-gradient(circle at 50% 50%, rgba(229, 169, 60, 0.12) 0%, rgba(18, 11, 14, 0.8) 100%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 4vw, 3rem);
+  text-align: center;
+  margin-top: 3.5rem;
+}
+
+.authentic-ingredients-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-gold-light);
+  margin-bottom: 1rem;
+  letter-spacing: 0.05em;
+}
+
+.authentic-ingredients-text {
+  max-width: 820px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--color-text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 05: NOSSOS PRATOS REAIS (#nossos-pratos)
+   -------------------------------------------------------------------------- */
+.real-dishes-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background-color: var(--color-bg-deep);
+  overflow: hidden;
+}
+
+.gallery-3d-container {
+  position: relative;
+  max-width: 980px;
+  margin: 0 auto clamp(2.5rem, 4vw, 3.5rem);
+  padding: 2rem 0;
+}
+
+.gallery-stage {
+  position: relative;
+  height: clamp(340px, 50vw, 500px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+}
+
+.gallery-slide {
+  position: absolute;
+  width: clamp(280px, 60vw, 480px);
+  height: clamp(320px, 45vw, 460px);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid rgba(229, 169, 60, 0.25);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8);
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity 0.6s ease,
+              filter 0.6s ease,
+              z-index 0.6s ease;
+  user-select: none;
+  cursor: pointer;
+  background-color: #120a0d;
+}
+
+.gallery-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-slide-tag {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(180deg, transparent 0%, rgba(8, 5, 6, 0.95) 100%);
+  padding: 1.5rem 1.25rem 1rem;
+  color: var(--color-text-primary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Estados da Galeria 3D (Profundidade & Foco) */
+.gallery-slide.is-active {
+  transform: translateX(0) scale(1) translateZ(0);
+  opacity: 1;
+  filter: none;
+  z-index: 10;
+  border-color: var(--color-gold-amber);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 30px rgba(229, 169, 60, 0.25);
+}
+
+.gallery-slide.is-prev {
+  transform: translateX(-55%) scale(0.82) translateZ(-100px);
+  opacity: 0.45;
+  filter: blur(1.5px) brightness(0.7);
+  z-index: 5;
+}
+
+.gallery-slide.is-next {
+  transform: translateX(55%) scale(0.82) translateZ(-100px);
+  opacity: 0.45;
+  filter: blur(1.5px) brightness(0.7);
+  z-index: 5;
+}
+
+.gallery-slide.is-hidden {
+  opacity: 0;
+  transform: scale(0.65) translateZ(-200px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Controles da Galeria */
+.gallery-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.gallery-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: rgba(26, 18, 22, 0.8);
+  border: 1px solid rgba(229, 169, 60, 0.3);
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.gallery-btn:hover {
+  background: var(--gradient-gold);
+  color: #080506;
+  border-color: var(--color-gold-amber);
+  transform: scale(1.08);
+  box-shadow: var(--shadow-gold);
+}
+
+.gallery-dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.gallery-dot.is-active {
+  width: 28px;
+  border-radius: 10px;
+  background: var(--gradient-gold);
+  box-shadow: 0 0 10px rgba(229, 169, 60, 0.5);
+}
+
+.real-dishes-closing {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.real-dishes-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 06: PROVA SOCIAL (#prova-social)
+   -------------------------------------------------------------------------- */
+.social-proof-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background: linear-gradient(180deg, #080506 0%, #130D0F 50%, #080506 100%);
+}
+
+.google-rating-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  background: rgba(24, 16, 20, 0.7);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem 2.25rem;
+  margin-bottom: 3.5rem;
+}
+
+.rating-score-group {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.rating-number {
+  font-family: var(--font-heading);
+  font-size: 2.75rem;
+  font-weight: 700;
+  color: var(--color-gold-amber);
+  line-height: 1;
+}
+
+.rating-stars {
+  display: flex;
+  gap: 4px;
+  color: #F4B400;
+  font-size: 1.25rem;
+}
+
+.rating-label {
+  font-size: 0.88rem;
+  color: var(--color-text-secondary);
+}
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  margin-bottom: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1040px) {
+  .reviews-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.review-card {
+  background: rgba(22, 14, 18, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all var(--transition-fast);
+}
+
+.review-card:hover {
+  border-color: rgba(229, 169, 60, 0.3);
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.review-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gradient-gold);
+  color: #0b0709;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.review-author {
+  font-weight: 600;
+  font-size: 0.98rem;
+  color: var(--color-text-primary);
+}
+
+.review-meta {
+  font-size: 0.78rem;
+  color: var(--color-text-muted);
+}
+
+.review-text {
+  font-size: 0.94rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.review-photos-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.review-photo-item {
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  aspect-ratio: 1;
+}
+
+.review-photo-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 07: CULTURA PARAENSE (#cultura-para)
+   -------------------------------------------------------------------------- */
+.culture-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background-color: var(--color-bg-deep);
+}
+
+.culture-impact-phrase {
+  max-width: 820px;
+  margin: 0 auto clamp(2.5rem, 4vw, 4rem);
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: clamp(1.2rem, 1.1rem + 0.6vw, 1.6rem);
+  color: var(--color-gold-light);
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.culture-cards-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 900px) {
+  .culture-cards-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.culture-card {
+  background: rgba(22, 14, 18, 0.6);
+  border: 1px solid rgba(229, 169, 60, 0.18);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all var(--transition-normal);
+}
+
+.culture-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-gold-amber);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+.culture-card-banner {
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  background-color: #120a0d;
+}
+
+.culture-card-banner img,
+.culture-card-banner video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.culture-card:hover .culture-card-banner img,
+.culture-card:hover .culture-card-banner video {
+  transform: scale(1.06);
+}
+
+.culture-card-badge {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  background: rgba(8, 5, 6, 0.85);
+  backdrop-filter: blur(8px);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: var(--color-gold-light);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border: 1px solid rgba(229, 169, 60, 0.3);
+}
+
+.culture-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.culture-card-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.culture-card-subtitle {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-gold-amber);
+  margin-bottom: 1rem;
+}
+
+.culture-card-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 08: INGREDIENTES E RAÍZES (#ingredientes)
+   -------------------------------------------------------------------------- */
+.ingredients-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background: linear-gradient(180deg, #080506 0%, #110B0E 50%, #080506 100%);
+}
+
+.ingredients-duo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: clamp(3.5rem, 6vw, 5rem);
+}
+
+@media (min-width: 860px) {
+  .ingredients-duo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.ingredient-card {
+  background: rgba(25, 16, 21, 0.75);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 3.5vw, 2.75rem);
+  position: relative;
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.ingredient-card:hover {
+  border-color: var(--color-gold-amber);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-4px);
+}
+
+.ingredient-tag {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold-amber);
+  margin-bottom: 0.75rem;
+}
+
+.ingredient-name {
+  font-family: var(--font-heading);
+  font-size: clamp(1.8rem, 1.6rem + 0.8vw, 2.4rem);
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.ingredient-punchline {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-gold-light);
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.ingredient-text {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+/* Segundo Bloco: A Força do Povo Nortista */
+.nortista-people-card {
+  background: radial-gradient(circle at 70% 30%, rgba(229, 169, 60, 0.1) 0%, rgba(18, 11, 14, 0.9) 100%);
+  border: 1px solid rgba(229, 169, 60, 0.25);
+  border-radius: var(--radius-lg);
+  padding: clamp(2.25rem, 4vw, 3.5rem);
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nortista-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 1.4rem + 0.8vw, 2.2rem);
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.nortista-subtitle {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-gold-amber);
+  margin-bottom: 1.5rem;
+}
+
+.nortista-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 09: NOSSO ESPAÇO (#nosso-espaco)
+   -------------------------------------------------------------------------- */
+.our-space-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background-color: var(--color-bg-deep);
+}
+
+.space-intro {
+  max-width: 820px;
+  margin: 0 auto clamp(2.5rem, 4vw, 3.5rem);
+  text-align: center;
+  font-size: 1.1rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+.space-impact-phrase {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-gold-light);
+  margin-top: 1.25rem;
+}
+
+.space-closing-card {
+  max-width: 860px;
+  margin: clamp(3rem, 5vw, 4.5rem) auto 0;
+  text-align: center;
+  background: rgba(22, 14, 18, 0.6);
+  border: 1px solid rgba(229, 169, 60, 0.2);
+  border-radius: var(--radius-lg);
+  padding: clamp(2rem, 3.5vw, 3rem);
+}
+
+.space-closing-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.space-closing-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gold-amber);
+  margin-bottom: 1.25rem;
+}
+
+.space-closing-text {
+  font-size: 0.98rem;
+  line-height: 1.75;
+  color: var(--color-text-secondary);
+}
+
+/* --------------------------------------------------------------------------
+   DOBRA 10: LOCALIZAÇÃO, CONTATO & HORÁRIOS (#localizacao & #contato)
+   -------------------------------------------------------------------------- */
+.location-section {
+  padding: clamp(5rem, 8vw, 7.5rem) 0;
+  position: relative;
+  background: linear-gradient(180deg, #080506 0%, #130D0F 50%, #080506 100%);
+}
+
+.location-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: clamp(2rem, 4vw, 3.5rem);
+  align-items: start;
+}
+
+@media (min-width: 960px) {
+  .location-grid {
+    grid-template-columns: 1fr 1.1fr;
+  }
+}
+
+.location-info-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.address-box {
+  background: rgba(24, 16, 20, 0.7);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 2rem;
+}
+
+.address-label {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-gold-amber);
+  margin-bottom: 0.5rem;
+}
+
+.address-text {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.hours-schedule {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1rem;
+}
+
+.hours-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+}
+
+.hours-item.highlight-delivery {
+  background: rgba(229, 169, 60, 0.12);
+  border: 1px solid rgba(229, 169, 60, 0.28);
+}
+
+.hours-day {
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.hours-time {
+  color: var(--color-gold-light);
+  text-align: right;
+}
+
+.delivery-badge-note {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--color-gold-amber);
+  margin-top: 0.35rem;
+}
+
+/* Mapa Interativo e Efeito Aéreo */
+.map-frame-wrapper {
+  position: relative;
+  background: rgba(20, 13, 16, 0.8);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+}
+
+.map-viewport {
+  position: relative;
+  height: clamp(380px, 45vw, 480px);
+  width: 100%;
+  overflow: hidden;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(0.2) contrast(1.1) invert(0.9) hue-rotate(180deg);
+}
+
+.map-aerial-overlay {
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  z-index: 5;
+  background: rgba(8, 5, 6, 0.85);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(229, 169, 60, 0.3);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+.map-pulse-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #E5A93C;
+  position: relative;
+}
+
+.map-pulse-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 2px solid #E5A93C;
+  animation: pulsePin 1.8s infinite;
+}
+
+@keyframes pulsePin {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+
+.map-pin-title {
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--color-gold-amber);
+  text-transform: uppercase;
+}
+
+.map-actions-bar {
+  padding: 1.25rem 1.5rem;
+  background: rgba(14, 9, 12, 0.95);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   RODAPÉ COMPLETO & ENCERRAMENTO DA EXPERIÊNCIA
+   -------------------------------------------------------------------------- */
+.site-footer {
+  background: #050304;
+  border-top: 1px solid rgba(229, 169, 60, 0.18);
+  padding: clamp(4rem, 6vw, 6rem) 0 2rem;
+  position: relative;
+  color: var(--color-text-secondary);
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  margin-bottom: clamp(3rem, 5vw, 4.5rem);
+}
+
+@media (min-width: 768px) {
+  .footer-top {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}
+
+.footer-brand-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(229, 169, 60, 0.12);
+  border: 1px solid rgba(229, 169, 60, 0.25);
+  padding: 4px;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  max-width: 360px;
+}
+
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-text-primary);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-nav-link {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+}
+
+.footer-nav-link:hover {
+  color: var(--color-gold-light);
+  transform: translateX(4px);
+}
+
+.footer-contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  font-size: 0.9rem;
+}
+
+.footer-contact-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  color: var(--color-text-muted);
+}
+
+.footer-contact-item svg {
+  width: 18px;
+  height: 18px;
+  fill: var(--color-gold-amber);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Encerramento Emocional da Experiência */
+.footer-emotional-closure {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  margin-bottom: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footer-signature-phrase {
+  font-family: var(--font-accent);
+  font-size: clamp(1.4rem, 1.2rem + 1vw, 2.1rem);
+  color: var(--color-gold-light);
+  letter-spacing: 0.03em;
+  margin-bottom: 0.5rem;
+}
+
+.footer-signature-sub {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+}
