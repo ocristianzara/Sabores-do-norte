@@ -1,24 +1,18 @@
 /**
- * SABORES DO NORTE — CURSOR PERSONALIZADO COM SEMENTE DE AÇAÍ E RASTRO DE LUZ
- * Cria o rastro de luz fluida no tom do açaí (tons roxo/violeta com brilho e faíscas)
- * com a semente do açaí na ponta do mouse.
+ * SABORES DO NORTE — RASTRO LUMINOSO DE CURSOR (#690174)
+ * Trilha de luz fluida no tom exato do açaí puro (#690174) com faíscas cintilantes,
+ * sem semente ou elemento obstrutivo sobre o ponteiro.
  */
 
 (function () {
   'use strict';
 
-  // Não ativar em dispositivos móveis ou touch
+  // Não ativa em dispositivos touch / móveis para preservar performance nativa
   if (window.matchMedia('(pointer: coarse)').matches) {
     return;
   }
 
-  // 1. Criação do elemento da semente de açaí
-  const acaiCursor = document.createElement('div');
-  acaiCursor.id = 'acai-cursor';
-  acaiCursor.innerHTML = '<img src="IMAGENS/acai_cursor.png" alt="Açaí Cursor" width="32" height="32">';
-  document.body.appendChild(acaiCursor);
-
-  // 2. Criação do Canvas para o Rastro de Luz Fluido
+  // 1. Criação do Canvas de Rastro em Tela Cheia
   const canvas = document.createElement('canvas');
   canvas.id = 'cursor-trail-canvas';
   document.body.appendChild(canvas);
@@ -34,28 +28,28 @@
 
   // Posições do Mouse
   let mouse = { x: -100, y: -100 };
-  let prevMouse = { x: -100, y: -100 };
   let isMoving = false;
   let moveTimeout;
 
-  // Pontos da trilha de luz
+  // Pontos da Trilha Luminosa
   const trailPoints = [];
-  const maxTrailPoints = 28;
+  const maxTrailPoints = 26;
 
-  // Partículas cintilantes (faíscas de luz no tom de açaí)
+  // Faíscas Cintilantes no Tom de Açaí #690174
   const particles = [];
 
-  class SparkleParticle {
+  class AcaiSparkle {
     constructor(x, y) {
-      this.x = x + (Math.random() - 0.5) * 8;
-      this.y = y + (Math.random() - 0.5) * 8;
-      this.size = Math.random() * 2.8 + 1.2;
+      this.x = x + (Math.random() - 0.5) * 6;
+      this.y = y + (Math.random() - 0.5) * 6;
+      this.size = Math.random() * 2.4 + 1.0;
       this.alpha = 1;
-      this.decay = Math.random() * 0.035 + 0.02;
-      this.vx = (Math.random() - 0.5) * 1.5;
-      this.vy = (Math.random() - 0.5) * 1.5 - 0.3; // leve subida
-      // Tons de Açaí Luminoso: púrpura, violeta neon e brilho lavanda
-      const colors = ['#D670F7', '#A844E8', '#8B1EA8', '#E9B9FB', '#58085E'];
+      this.decay = Math.random() * 0.038 + 0.022;
+      this.vx = (Math.random() - 0.5) * 1.4;
+      this.vy = (Math.random() - 0.5) * 1.4 - 0.25;
+
+      // Paleta centrada no tom oficial #690174 com variações de brilho
+      const colors = ['#690174', '#850E91', '#A81CB8', '#C738D9', '#F09BFA'];
       this.color = colors[Math.floor(Math.random() * colors.length)];
     }
 
@@ -63,7 +57,7 @@
       this.x += this.vx;
       this.y += this.vy;
       this.alpha -= this.decay;
-      this.size *= 0.95;
+      this.size *= 0.94;
     }
 
     draw(ctx) {
@@ -71,8 +65,8 @@
       ctx.save();
       ctx.globalAlpha = Math.max(0, this.alpha);
       ctx.fillStyle = this.color;
-      ctx.shadowColor = '#D670F7';
-      ctx.shadowBlur = 8;
+      ctx.shadowColor = '#850E91';
+      ctx.shadowBlur = 6;
       ctx.beginPath();
       ctx.arc(this.x, this.y, Math.max(0.2, this.size), 0, Math.PI * 2);
       ctx.fill();
@@ -80,104 +74,82 @@
     }
   }
 
-  // Rastreamento do Mouse
+  // Rastreamento Suave do Ponteiro
   window.addEventListener('mousemove', (e) => {
     mouse.x = e.clientX;
     mouse.y = e.clientY;
 
-    // Atualiza posição do elemento da semente de açaí
-    acaiCursor.style.transform = `translate3d(${mouse.x - 16}px, ${mouse.y - 16}px, 0)`;
-
-    // Adiciona ponto ao rastro
-    trailPoints.unshift({ x: mouse.x, y: mouse.y, age: 0 });
+    // Adiciona ponto na cabeça da trilha
+    trailPoints.unshift({ x: mouse.x, y: mouse.y });
     if (trailPoints.length > maxTrailPoints) {
       trailPoints.pop();
     }
 
-    // Gera faíscas cintilantes ao mover
-    if (Math.random() > 0.35) {
-      particles.push(new SparkleParticle(mouse.x, mouse.y));
+    // Libera faíscas sutis durante o movimento
+    if (Math.random() > 0.4) {
+      particles.push(new AcaiSparkle(mouse.x, mouse.y));
     }
 
     isMoving = true;
     clearTimeout(moveTimeout);
     moveTimeout = setTimeout(() => {
       isMoving = false;
-    }, 120);
+    }, 100);
   });
 
-  // Efeito de Hover em botões e links
-  const interactives = 'a, button, input, [role="button"], .essence-card, .gallery-slide';
-  document.addEventListener('mouseover', (e) => {
-    if (e.target.closest(interactives)) {
-      acaiCursor.classList.add('cursor-hover');
-    }
-  });
-
-  document.addEventListener('mouseout', (e) => {
-    if (e.target.closest(interactives)) {
-      acaiCursor.classList.remove('cursor-hover');
-    }
-  });
-
-  // Loop de Renderização da Trilha de Luz Fluida
+  // Loop de Renderização Contínua
   function render() {
     ctx.clearRect(0, 0, width, height);
 
-    // 1. Atualizar e Desenhar a Trilha de Luz Fluida (Tom de Açaí)
+    // 1. Desenho do Rastro de Luz Fluida (#690174)
     if (trailPoints.length > 2) {
       ctx.save();
       ctx.lineCap = 'round';
       ctx.lineJoin = 'round';
 
-      // Desenha múltiplos passes para o efeito de Glow intenso da referência
-      // Camada externa (Glow Suave Açaí)
       for (let i = 0; i < trailPoints.length - 1; i++) {
         const pt = trailPoints[i];
         const nextPt = trailPoints[i + 1];
-        const progress = 1 - i / trailPoints.length; // 1 na frente, 0 atrás
+        const progress = 1 - i / trailPoints.length; // 1 na ponta (mouse), 0 no fim
 
-        // Fita externa suave
+        // Camada 1: Glow Difuso Externo no tom #690174
         ctx.beginPath();
         ctx.moveTo(pt.x, pt.y);
         ctx.lineTo(nextPt.x, nextPt.y);
-        ctx.lineWidth = progress * 14;
-        ctx.strokeStyle = `rgba(139, 30, 168, ${progress * 0.28})`;
-        ctx.shadowColor = '#C154F3';
-        ctx.shadowBlur = 16;
+        ctx.lineWidth = progress * 13;
+        ctx.strokeStyle = `rgba(105, 1, 116, ${progress * 0.35})`;
+        ctx.shadowColor = '#690174';
+        ctx.shadowBlur = 14;
         ctx.stroke();
 
-        // Fita intermediária vibrante
+        // Camada 2: Fita Luminosa Intermediária
         ctx.beginPath();
         ctx.moveTo(pt.x, pt.y);
         ctx.lineTo(nextPt.x, nextPt.y);
-        ctx.lineWidth = progress * 6;
-        ctx.strokeStyle = `rgba(186, 75, 237, ${progress * 0.65})`;
-        ctx.shadowColor = '#E9B9FB';
-        ctx.shadowBlur = 8;
+        ctx.lineWidth = progress * 5.5;
+        ctx.strokeStyle = `rgba(133, 14, 145, ${progress * 0.75})`;
+        ctx.shadowColor = '#A81CB8';
+        ctx.shadowBlur = 7;
         ctx.stroke();
 
-        // Linha central de luz incandescente
+        // Camada 3: Núcleo Incandescente com Brilho Suave
         ctx.beginPath();
         ctx.moveTo(pt.x, pt.y);
         ctx.lineTo(nextPt.x, nextPt.y);
-        ctx.lineWidth = progress * 2.2;
-        ctx.strokeStyle = `rgba(248, 225, 255, ${progress * 0.9})`;
+        ctx.lineWidth = progress * 1.8;
+        ctx.strokeStyle = `rgba(240, 155, 250, ${progress * 0.95})`;
         ctx.stroke();
       }
 
       ctx.restore();
     }
 
-    // Envelhece e remove pontos do rastro
-    for (let i = 0; i < trailPoints.length; i++) {
-      trailPoints[i].age++;
-    }
+    // Retrai a trilha suavemente quando o mouse para
     if (!isMoving && trailPoints.length > 0) {
       trailPoints.pop();
     }
 
-    // 2. Atualizar e Desenhar Partículas de Faíscas
+    // 2. Renderização das Faíscas
     for (let i = particles.length - 1; i >= 0; i--) {
       const p = particles[i];
       p.update();

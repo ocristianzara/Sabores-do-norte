@@ -141,39 +141,9 @@ body.menu-open {
 }
 
 /* ==========================================================================
-   CURSOR PERSONALIZADO: SEMENTE DE AÇAÍ & RASTRO DE LUZ MÁGICA
+   CURSOR PERSONALIZADO: RASTRO DE LUZ FLUIDA (#690174)
    ========================================================================== */
 @media (pointer: fine) {
-  body {
-    cursor: default;
-  }
-
-  #acai-cursor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 32px;
-    height: 32px;
-    pointer-events: none;
-    z-index: 999999;
-    will-change: transform;
-    filter: drop-shadow(0 0 8px rgba(186, 75, 237, 0.75));
-    transition: filter 0.25s ease, scale 0.2s ease;
-  }
-
-  #acai-cursor img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    display: block;
-    animation: acaiSpin 12s linear infinite;
-  }
-
-  #acai-cursor.cursor-hover {
-    filter: drop-shadow(0 0 14px rgba(214, 112, 247, 0.95)) drop-shadow(0 0 22px rgba(142, 36, 170, 0.6));
-    scale: 1.25;
-  }
-
   #cursor-trail-canvas {
     position: fixed;
     inset: 0;
@@ -181,11 +151,6 @@ body.menu-open {
     height: 100vh;
     pointer-events: none;
     z-index: 999998;
-  }
-
-  @keyframes acaiSpin {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
   }
 }
 
